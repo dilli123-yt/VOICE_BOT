@@ -62,7 +62,7 @@ function sendText() {
 async function handleUserQuestion(text) {
   document.getElementById("userText").innerText = text;
 
-  const res = await fetch("http://localhost:3000/chat", {
+  const res = await fetch("https://voice-bot-0vd8.onrender.com/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: text })
@@ -123,3 +123,4 @@ function stopWave() {
   if (animationId) cancelAnimationFrame(animationId);
   if (audioContext) audioContext.close();
 }
+
