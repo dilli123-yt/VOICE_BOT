@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask Me Anything</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>🎙️ Ask Me</h1>
+     
+    </div>
+
+    <div class="main">
+
+      <!-- LEFT PANEL -->
+      <!-- <div class="profile">
+        <h2>👋 About This Bot</h2>
+        <p>
+          This is a voice-based assistant that answers naturally,
+          just like a real conversation.  
+          You can speak or type — ask anything you want.
+        </p>
+
+        <div class="suggestions">
+          <h3>💡 Try asking:</h3>
+          <ul>
+            <li>Tell me something about yourself</li>
+            <li>How do you handle challenges?</li>
+            <li>What motivates you?</li>
+            <li>How do you learn new things?</li>
+            <li>What kind of person are you?</li>
+          </ul>
+        </div>
+      </div> -->
+
+      <!-- RIGHT PANEL -->
+      <div class="chat">
+
+        <input
+          type="text"
+          id="textInput"
+          placeholder="Ask anything…"
+        />
+
+        <p id="statusText">Click Speak and start talking</p>
+
+        <div class="buttons">
+          <button onclick="startListening()">🎤 Speak</button>
+          <button onclick="sendText()">💬 Ask</button>
+        </div>
+
+        <!-- MIC UI -->
+        <div id="micUI" class="mic-ui hidden">
+          <div class="mic-visual">
+            🎤
+            <canvas id="waveCanvas" width="220" height="40"></canvas>
+          </div>
+
+          <div class="mic-actions">
+            <button class="mic-btn cancel" onclick="cancelListening()">Cancel</button>
+            <button class="mic-btn ok" onclick="confirmListening()">OK</button>
+          </div>
+        </div>
+
+        <!-- CHAT -->
+        <div class="chat-box">
+          <div class="message you">
+            <strong>You:</strong>
+            <span id="userText">Say something to begin.</span>
+          </div>
+
+          <div class="message ai">
+            <strong>AI:</strong>
+            <span id="aiText" class="ai-text"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
